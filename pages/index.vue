@@ -3,7 +3,7 @@
     <!-- Background image section (now on the left) -->
     <div class="relative hidden w-0 flex-1 lg:block">
       <img
-        src="../assets/images/sellinger_church.jpg"
+        src="../assets/images/Sellinger_Church.jpg"
         alt="Background"
         class="h-full w-full object-cover"
       />
