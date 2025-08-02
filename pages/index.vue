@@ -3,9 +3,9 @@
     <!-- Background image section (now on the left) -->
     <div class="relative hidden w-0 flex-1 lg:block">
       <img
-        src="../assets/images/Sellinger_Church.jpg"
+        src="/images/mainimage.jpeg"
         alt="Background"
-        class="h-full w-full object-cover"
+        class="min-h-screen max-h-screen w-full object-cover object-center"
       />
       <div
         class="absolute inset-0 h-full w-full bg-gradient-to-b from-primary-800/50 to-primary-50/50"

@@ -6,7 +6,7 @@ export const useAuthStore = defineStore("auth", {
   }),
   actions: {
     login(password: string) {
-      if (password === "12345678") {
+      if (password === "123") {
         this.isAuthenticated = true;
         return true;
       }
