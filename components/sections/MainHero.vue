@@ -20,7 +20,7 @@
           informatie voor
           <span class="underline decoration-primary-500">alle</span> gasten!
         </p>
-        <Button label="Belangrijke Informatie" />
+        <Button label="Belangrijke Informatie" to="#help-needed" />
       </div>
       <img
         src="/images/mainimage.jpeg"

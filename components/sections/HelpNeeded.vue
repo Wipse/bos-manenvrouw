@@ -1,5 +1,6 @@
 <template>
   <section
+    id="help-needed"
     class="bg-white w-screen h-screen flex items-center justify-center relative"
   >
     <div class="grid grid-cols-12 container mx-auto h-full relative z-10">
@@ -18,7 +19,7 @@
           manieren. Om deze verrassingen tot een succes te maken, hebben wij
           <span class="font-bold"> jullie medewerking nodig!</span>
         </p>
-        <Button label="Lees meer" class="w-fit" />
+        <Button label="Lees meer" class="w-fit" to="/help" />
       </div>
       <div class="col-span-6 flex flex-col justify-center"><NewsCard /></div>
     </div>
