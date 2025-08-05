@@ -3,7 +3,7 @@
     <div class="container mx-auto text-white text-center py-2 text-sm px-4">
       <p v-if="!isWeddingDay">
         Nog {{ days }} dagen, {{ hours }} uur, {{ minutes }} minuten en
-        {{ seconds }} seconden tot de bruiloft!
+        {{ seconds }} seconden tot de huwelijksdag!
       </p>
       <p v-else class="animate-pulse font-bold">
         🎉 Vandaag is de grote dag! 🎉
@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 
-const weddingDate = new Date("2025-10-10T20:00:00");
+const weddingDate = new Date("2025-10-10T00:00:00");
 
 const days = ref(0);
 const hours = ref(0);

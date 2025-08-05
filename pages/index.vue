@@ -3,7 +3,7 @@
     <!-- Background image section (now on the left) -->
     <div class="relative hidden w-0 flex-1 lg:block">
       <img
-        src="/images/mainimage.jpeg"
+        src="/images/intropic.jpeg"
         alt="Background"
         class="min-h-screen max-h-screen w-full object-cover object-center"
       />
@@ -22,12 +22,15 @@
           <h1
             class="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900"
           >
-            Jouw ticket naar de bruiloft
+            Op weg naar de bruiloft!
           </h1>
           <p class="mt-2 text-sm leading-5 text-gray-500">
-            Welkom op de site van de bruiloft van Selvan en Bertine. Voer hier
-            onder het wachtwoord in dat je in de mail hebt ontvangen om zo
+            Voer hieronder de inlogcode in uit de brief bij de trouwkaart om zo
             toegang te krijgen tot de bruiloftsinformatie.
+          </p>
+          <p class="mt-2 text-sm leading-5 text-gray-500">
+            Mocht je deze code kwijt zijn, stuur dan even een appje naar één van
+            de ceremoniemeesters.
           </p>
         </div>
 
@@ -39,7 +42,7 @@
                   for="password"
                   class="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  Wachtwoord
+                  Inlogcode
                 </label>
                 <div class="mt-2">
                   <input

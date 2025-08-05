@@ -10,14 +10,13 @@
           class="size-[20rem] h-fit mb-6"
         />
         <div class="w-fit">
-          <Heading title="Wij hebben jullie hulp nodig!" size="h2" is_bold />
+          <Heading title="Wij hebben jullie hulp nodig" size="h2" is_bold />
           <div class="min-h-[3px] w-5/6 rounded-full bg-primary-500 mb-4"></div>
         </div>
         <p class="leading-[32px] mb-6 text-gray-700">
-          Wij - de cermoniemeesters - hebben twee ideeën bedacht voor tijdens
-          het feest. Om deze ideeën te laten slagen, hebben wij iedereen zijn
-          hulp nodig. Kunnen jullie ons helpen door de instructies op de
-          volgende pagina te volgen?
+          We gaan met z'n allen het bruidspaar verrassen! Op twee verschillende
+          manieren. Om deze verrassingen tot een succes te maken, hebben wij
+          <span class="font-bold"> jullie medewerking nodig!</span>
         </p>
         <Button label="Lees meer" class="w-fit" />
       </div>

@@ -10,11 +10,15 @@
             class="min-h-1 w-1/2 rounded-full bg-primary-500 mb-4 mt-2"
           ></div>
         </div>
-        <p class="leading-[32px] mb-6 text-gray-700">
-          Twee harten die één worden, twee zielen die samensmelten. Na jaren van
-          lachen, dromen en plannen maken is het eindelijk zover! Kom en vier
-          mee het begin van ons prachtige avontuur als echtpaar. Want de mooiste
-          verhalen beginnen met "en ze leefden nog lang en gelukkig..."
+        <p class="leading-[26px] mb-6 text-gray-700">
+          Welkom op de website van de bruiloft van Selvan en Bertine. Hier vind
+          je alle praktische informatie over hun huwelijksdag, of je nu daggast
+          of avondgast bent.
+        </p>
+        <p class="leading-[26px] mb-6 text-gray-700">
+          Klik ook vooral even op de knop hieronder, want we hebben belangrijke
+          informatie voor
+          <span class="underline decoration-primary-500">alle</span> gasten!
         </p>
         <Button label="Belangrijke Informatie" />
       </div>
