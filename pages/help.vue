@@ -1,5 +1,6 @@
 <template>
   <SectionsCountdownBanner v-if="beforeWedding" />
+  <SectionsHeader />
   <SectionsArticle />
 </template>
 

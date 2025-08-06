@@ -1,7 +1,8 @@
 <template>
   <section
-    class="bg-primary-50 w-screen h-screen flex items-center justify-center py-12"
+    class="bg-primary-50 w-screen h-[95vh] flex items-center justify-center py-12"
   >
+    <Icon name="logo" class="size-10" />
     <div class="grid grid-cols-12 container mx-auto">
       <div class="col-span-5">
         <div class="w-fit">

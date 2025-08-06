@@ -1,10 +1,11 @@
 <template>
   <section
+    id="avond-gasten"
     class="bg-primary-50 w-screen h-screen flex items-center justify-center relative"
   >
     <div class="grid grid-cols-12 container mx-auto h-full relative z-10">
       <!-- Left side -->
-      <div class="col-span-6 flex flex-col justify-center">
+      <div class="col-span-6 flex flex-col justify-start pt-[25vh]">
         <GoogleMapsEmbed
           height="384"
           container-class="w-full rounded-xl shadow-custom"
@@ -30,7 +31,7 @@
       </div>
 
       <!-- Right side -->
-      <div class="col-span-5 col-start-8 flex flex-col justify-center">
+      <div class="col-span-5 col-start-8 flex flex-col justify-start pt-[25vh]">
         <div class="w-fit">
           <Heading title="Waar is dat feestje?" size="h2" is_bold />
           <div class="min-h-[3px] w-5/6 rounded-full bg-primary-500 mb-4"></div>
@@ -50,7 +51,7 @@
           volgende pagina te volgen? Wij - de cermoniemeesters - hebben twee
           ideeën bedacht voor tijdens het feest.
         </p>
-        <Button label="Voor daggasten" class="w-fit" />
+        <Button label="Voor daggasten" to="/daggasten" class="w-fit" />
       </div>
     </div>
   </section>

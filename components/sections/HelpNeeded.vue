@@ -21,7 +21,9 @@
         </p>
         <Button label="Lees meer" class="w-fit" to="/help" />
       </div>
-      <div class="col-span-6 flex flex-col justify-center"><NewsCard /></div>
+      <div class="col-span-6 flex flex-col justify-center">
+        <NewsCard class="hidden" />
+      </div>
     </div>
     <div
       class="absolute right-0 top-0 w-2/5 h-full bg-gradient-to-l from-primary-500/60 to-white"
