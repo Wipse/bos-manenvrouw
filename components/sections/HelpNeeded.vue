@@ -3,8 +3,12 @@
     id="help-needed"
     class="bg-white w-screen h-screen flex items-center justify-center relative"
   >
-    <div class="grid grid-cols-12 container mx-auto h-full relative z-10">
-      <div class="col-span-6 flex flex-col justify-center">
+    <div
+      class="md:grid flex grid-cols-12 container mx-auto h-full relative z-10 items-center"
+    >
+      <div
+        class="col-span-6 flex text-center flex-col justify-center items-center md:items-start md:text-start"
+      >
         <img
           src="/helpneeded.svg"
           alt="Help needed"
@@ -12,7 +16,9 @@
         />
         <div class="w-fit">
           <Heading title="Wij hebben jullie hulp nodig" size="h2" is_bold />
-          <div class="min-h-[3px] w-5/6 rounded-full bg-primary-500 mb-4"></div>
+          <div
+            class="min-h-[3px] md:w-5/6 w-full rounded-full bg-primary-500 mb-4"
+          ></div>
         </div>
         <p class="leading-[32px] mb-6 text-gray-700">
           We gaan met z'n allen het bruidspaar verrassen! Op twee verschillende

@@ -1,6 +1,8 @@
 <template>
-  <section class="bg-black h-[5vh]">
-    <div class="container mx-auto text-white text-center py-2 text-sm px-4">
+  <section class="bg-black w-full">
+    <div
+      class="container mx-auto text-white text-center py-2 text-xs md:text-sm px-4"
+    >
       <p v-if="!isWeddingDay">
         Nog {{ days }} dagen, {{ hours }} uur, {{ minutes }} minuten en
         {{ seconds }} seconden tot de huwelijksdag!

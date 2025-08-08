@@ -4,13 +4,15 @@
     :href="to"
     :class="[
       'nav-link relative px-2 py-1 hover:text-primary-500 transition-colors duration-300 cursor-pointer',
-      { 'nav-link--right flex pl-0.5': isRightSide },
+      { 'flex items-center gap-1': isRightSide },
       { 'text-primary-500': isActive },
+      textSizeClass,
     ]"
   >
     <Icon
       name="mdi:exclamation-thick"
-      class="size-6 text-primary-500"
+      :class="iconSizeClass"
+      class="text-primary-500"
       v-if="isRightSide"
     />
     <slot />
@@ -26,6 +28,7 @@ type Props = {
 const props = defineProps<Props>();
 const { smoothScrollTo, navigateAndScrollTo } = useSmoothScroll();
 const route = useRoute();
+const { isSmallScreen } = useBreakpoint();
 
 // Check if this link is active (only for page routes, not anchor links)
 const isActive = computed(() => {
@@ -52,27 +55,31 @@ const handleClick = async (event: MouseEvent) => {
   // Fall back to regular navigation
   navigateTo(props.to);
 };
+
+// Responsive text and icon sizes
+const textSizeClass = computed(() => {
+  return isSmallScreen.value ? "text-sm" : "text-base";
+});
+
+const iconSizeClass = computed(() => {
+  return isSmallScreen.value ? "size-4" : "size-5";
+});
 </script>
 
 <style scoped>
 .nav-link::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
   height: 2px;
   background-color: theme("colors.primary.500");
-  transform: scaleX(1);
-  transform-origin: left;
-  transition: transform 0.3s ease-out;
+  transition: width 0.3s ease-out;
 }
 
 .nav-link:hover::after {
-  transform: scaleX(0);
-}
-
-.nav-link--right::after {
-  transform-origin: right;
+  width: 100%;
 }
 </style>

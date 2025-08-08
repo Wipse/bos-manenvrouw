@@ -1,14 +1,16 @@
 <template>
-  <iframe
-    :src="embedUrl"
-    width="100%"
-    :height="height"
-    style="border: 0"
-    allowfullscreen="true"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    :class="containerClass"
-  />
+  <div class="relative z-0">
+    <iframe
+      :src="embedUrl"
+      width="100%"
+      :height="height"
+      style="border: 0; position: relative; z-index: 1"
+      allowfullscreen="true"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      :class="containerClass"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">

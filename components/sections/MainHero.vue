@@ -1,15 +1,13 @@
 <template>
   <section
-    class="bg-primary-50 w-screen h-[95vh] flex items-center justify-center py-12"
+    class="bg-primary-50 w-screen md:h-screen flex items-center justify-center py-12 pt-32 md:pt-28"
   >
     <Icon name="logo" class="size-10" />
-    <div class="grid grid-cols-12 container mx-auto">
+    <div class="md:grid md:grid-cols-12 container md:mt-0 mt-16 mx-auto">
       <div class="col-span-5">
         <div class="w-fit">
           <Heading title="Ja, ik wil!" size="h1" />
-          <div
-            class="min-h-1 w-1/2 rounded-full bg-primary-500 mb-4 mt-2"
-          ></div>
+          <div class="min-h-1 w-1/2 rounded-full bg-primary-500 mb-4 mt-2" />
         </div>
         <p class="leading-[26px] mb-6 text-gray-700">
           Welkom op de website van de bruiloft van Selvan en Bertine. Hier vind
@@ -26,7 +24,7 @@
       <img
         src="/images/mainimage.jpeg"
         alt="Main Hero"
-        class="col-span-5 col-start-8 rounded-lg"
+        class="col-span-5 md:mt-0 mt-16 col-start-8 rounded-lg"
       />
     </div>
   </section>

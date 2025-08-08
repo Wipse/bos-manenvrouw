@@ -12,24 +12,32 @@
         );
       "
     >
-      <div class="container flex flex-col items-center pt-32">
-        <Heading title="Hulp nodig!" size="h1" />
-        <div class="min-h-1 w-1/2 rounded-full bg-primary-500 mb-4 mt-2"></div>
-        <p class="leading-[26px] mb-6 text-center text-gray-700">
-          Welkom op de website van de bruiloft van Selvan en Bertine. Hier vind
-          je alle praktische informatie over hun huwelijksdag, of je nu daggast
-          of avondgast bent.
-        </p>
+      <div
+        class="container flex flex-col items-center justify-center pt-32 px-4"
+      >
+        <div class="max-w-3xl mx-auto text-center">
+          <Heading title="Hulp nodig!" size="h1" />
+          <div
+            class="min-h-1 md:w-1/2 w-3/4 mx-auto rounded-full bg-primary-500 mb-4 mt-2"
+          ></div>
+          <p class="leading-[26px] mb-6 text-center text-gray-700">
+            Welkom op de website van de bruiloft van Selvan en Bertine. Hier
+            vind je alle praktische informatie over hun huwelijksdag, of je nu
+            daggast of avondgast bent.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- Bottom Section -->
     <div class="bg-white w-screen h-fit">
-      <div class="container grid grid-cols-12 items-center">
+      <div class="container px-4 py-8">
         <!-- First Article -->
-        <div class="col-span-8 col-start-3">
+        <div class="max-w-4xl mx-auto md:col-span-8 md:col-start-3">
           <Heading title="Flashmob" size="h2" class="-mb-2" />
-          <div class="min-h-0.5 w-1/4 rounded-full bg-primary-500 mb-4 mt-2" />
+          <div
+            class="min-h-0.5 md:w-1/4 w-1/2 rounded-full bg-primary-500 mb-4 mt-2"
+          />
           <p class="leading-[26px] mb-6 text-gray-900">
             Ter verhoging van de feestvreugde in de avond gaan we rond 22 uur
             met alle gasten een heuse flashmob doen (heb je geen idee wat dit
@@ -40,7 +48,7 @@
             'moves' worden hier stap-voor-stap uitgelegd:
           </p>
           <iframe
-            class="w-full h-96 mt-6 rounded-lg shadow-lg"
+            class="w-full h-64 md:h-96 mt-6 rounded-lg shadow-lg"
             src="https://www.youtube.com/embed/_7f5_5-Zyi4"
             title="Flashmob Video"
             frameborder="0"
@@ -51,14 +59,14 @@
             De ceremoniemeesters beginnen, gevolgd door de naaste familie,
             daarna alle andere daggasten, met vervolgens steeds meer aanwezigen,
             totdat de hele zaal meedoet en Selvan & Bertine staan te kijken met
-            een blik van “wat gebeurt hííééer?!” <br />
+            een blik van "wat gebeurt hííééér?!" <br />
             Wij verheugen ons nu al op hun verraste gezichten!
           </p>
           <p class="leading-[26px] mt-3 text-gray-900">
             We willen jullie natuurlijk vragen om flink te oefenen thuis. Dit
             kan al veel lol en voorpret opleveren; frustratie ook wellicht, maar
             in ons allen schuilt vast wel een beetje een Barrie Stevens,
-            dus….“vooral doorgaan!” <br />
+            dus…."vooral doorgaan!" <br />
             Het gaat om de spontaniteit en het verrassingselement, dus het hoeft
             echt niet perfect! Hier geldt de Olympische Gedachte: meedoen is
             belangrijker dan presteren!
@@ -66,9 +74,13 @@
         </div>
 
         <!-- Second Article -->
-        <div class="col-span-8 col-start-3 mt-24 mb-32">
+        <div
+          class="max-w-4xl mx-auto md:col-span-8 md:col-start-3 mt-16 md:mt-24 mb-16 md:mb-32"
+        >
           <Heading title="Kaartje" size="h2" class="-mb-2" />
-          <div class="min-h-0.5 w-1/5 rounded-full bg-primary-500 mb-4 mt-2" />
+          <div
+            class="min-h-0.5 md:w-1/5 w-1/3 rounded-full bg-primary-500 mb-4 mt-2"
+          />
           <p class="leading-[26px] mb-6 text-gray-900">
             De tweede verrassing die we voor Selvan & Bertine in petto hebben,
             heeft betrekking op de weken na hun huwelijksdag. <br />
