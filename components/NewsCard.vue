@@ -7,7 +7,7 @@
       <img
         :src="`/images/${props.image}`"
         :alt="props.title"
-        class="aspect-square w-full object-cover rounded-t-xl"
+        class="aspect-square w-full h-44 object-cover rounded-t-xl"
       />
       <div class="flex flex-col py-2 px-4 gap-1">
         <p class="text-md font-bold font-heading line-clamp-2">

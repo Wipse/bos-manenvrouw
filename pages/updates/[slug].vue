@@ -96,137 +96,22 @@ const navigateToNews = async () => {
 // Sample update data - in een echte app zou dit van een API komen
 const updateData = computed(() => {
   const updates = {
-    "laatste-updates-bruiloft": {
-      title: "Laatste updates voor de bruiloft!",
-      date: "2025-09-15",
-      image: "/images/mainimage.jpeg",
-      content: `
-        <p>Lieve familie en vrienden, we zijn zo dankbaar dat jullie onze speciale dag met ons willen vieren! Hier zijn de allerlaatste updates voor onze bruiloft.</p>
-        
-        <h3>Belangrijke wijzigingen</h3>
-        <p>We hebben een paar kleine aanpassingen gemaakt aan het programma om ervoor te zorgen dat alles perfect verloopt:</p>
-        
-        <ul>
-          <li>De fotosessie begint 15 minuten eerder</li>
-          <li>Er is extra tijd ingepland voor de borrel</li>
-          <li>Het diner wordt geserveerd om 18:00 in plaats van 17:30</li>
-        </ul>
-        
-        <h3>Wat te verwachten</h3>
-        <p>De dag wordt magisch! We kunnen niet wachten om deze bijzondere momenten met jullie te delen. Vergeet niet je camera's mee te nemen voor spontane foto's.</p>
-        
-        <p>Tot gauw! ❤️<br>
-        Selvan & Bertine</p>
-      `,
-    },
-    "parkeerinformatie-sellingen": {
-      title: "Parkeerinformatie Sellingen",
-      date: "2025-09-10",
-      image: "/images/Sellinger_Church.jpg",
-      content: `
-        <p>Omdat parkeren in Sellingen soms een uitdaging kan zijn, hebben we alle belangrijke informatie voor jullie op een rijtje gezet.</p>
-        
-        <h3>Parkeermogelijkheden</h3>
-        <p>Er zijn verschillende opties om te parkeren in Sellingen:</p>
-        
-        <ul>
-          <li><strong>Achter het gemeentehuis:</strong> Gratis parkeren, ca. 20 plekken</li>
-          <li><strong>Dorpsstraat:</strong> Langs de weg, let op tijdslimiet</li>
-          <li><strong>Bij de kerk:</strong> Ruime parkeerplaats, aangeraden!</li>
-          <li><strong>Hof van Sellingen:</strong> Tegenover het gemeentehuis</li>
-        </ul>
-        
-        <h3>Onze tip</h3>
-        <p>Kom ruim op tijd! Alle locaties zijn op loopafstand van elkaar, dus je hoeft je auto niet te verplaatsen gedurende de dag.</p>
-        
-        <p>Vragen? Laat het ons weten!</p>
-      `,
-    },
-    "belangrijke-wijzigingen-tijdschema": {
-      title: "Belangrijke wijzigingen tijdschema",
+    "website-live": {
+      title: "Website gaat de lucht in!!!",
       date: "2025-09-08",
-      image: "/images/intropic.jpeg",
-      content: `
-        <p>We hebben een paar kleine maar belangrijke wijzigingen aangebracht in ons tijdschema. Lees goed door zodat je niets mist!</p>
-        
-        <h3>Nieuwe tijden</h3>
-        <ul>
-          <li><strong>10:30:</strong> Verzamelen bij het gemeentehuis (was 10:45)</li>
-          <li><strong>11:00:</strong> Start ceremonie</li>
-          <li><strong>12:30:</strong> Lunch bij Herberg Sellingen</li>
-          <li><strong>13:30:</strong> Kerkelijke inzegening</li>
-          <li><strong>16:00:</strong> Receptie Zaal Mulder</li>
-          <li><strong>18:00:</strong> Diner (nieuwe tijd!)</li>
-          <li><strong>20:30:</strong> Avondfeest begint</li>
-        </ul>
-        
-        <h3>Waarom de wijziging?</h3>
-        <p>We hebben wat meer tijd ingepland tussen de verschillende onderdelen, zodat we rustig van de ene naar de andere locatie kunnen gaan zonder stress.</p>
-        
-        <p>Bedankt voor jullie begrip en flexibiliteit! 💕</p>
-      `,
-    },
-    "weersvoorspelling-tips": {
-      title: "Weersvoorspelling en tips",
-      date: "2025-09-05",
       image: "/images/mainimage.jpeg",
       content: `
-        <p>De weersvoorspelling voor onze bruiloft ziet er fantastisch uit! Hier zijn een paar tips om optimaal voorbereid te zijn.</p>
+        <p>Het is gelukt! Vóórdat de avondgasten hun kaart in de bus hebben liggen. De websitebouwer (neef van Bertine) heeft heel erg z'n best gedaan om de deadline te halen. We zijn enorm blij met het resultaat.</p>
         
-        <h3>Verwachte weersomstandigheden</h3>
-        <p>Voor 10 oktober wordt prachtig herfstweer verwacht:</p>
-        <ul>
-          <li>Temperatuur: 18-22°C</li>
-          <li>Zonneschijn met enkele wolken</li>
-          <li>Minimale kans op regen</li>
-          <li>Lichte wind</li>
-        </ul>
-        
-        <h3>Kledingadvies</h3>
-        <p>Denk aan:</p>
-        <ul>
-          <li>Een lichte jas of sjaal voor 's avonds</li>
-          <li>Comfortabele schoenen voor buiten</li>
-          <li>Eventueel een paraplu (voor de zekerheid)</li>
-        </ul>
-        
-        <h3>Outdoor momenten</h3>
-        <p>We plannen verschillende momenten buiten, zoals de fotosessie en de borrel. Het weer werkt perfect mee voor deze bijzondere momenten!</p>
-        
-        <p>We zien jullie binnenkort! 🌞</p>
+        <p class="mt-2">3 hoeraatjes voor Wisse!!</p>
       `,
     },
-    "dresscode-reminder": {
-      title: "Dresscode reminder",
-      date: "2025-09-01",
+    "uitnodigingen-verstuurd": {
+      title: "Alle uitnodigingen zijn de deur uit!",
+      date: "2025-08-08",
       image: "/images/Sellinger_Church.jpg",
       content: `
-        <p>Een vriendelijke herinnering over de dresscode voor onze bruiloft. We willen dat iedereen zich comfortabel en passend gekleed voelt!</p>
-        
-        <h3>Dresscode: Semi-formeel</h3>
-        <p>Denk aan:</p>
-        
-        <h4>Voor de heren:</h4>
-        <ul>
-          <li>Pak of blazer met nette broek</li>
-          <li>Overhemd (stropdas mag, maar hoeft niet)</li>
-          <li>Nette schoenen</li>
-        </ul>
-        
-        <h4>Voor de dames:</h4>
-        <ul>
-          <li>Cocktailjurk, rok met blouse, of nette pantalon</li>
-          <li>Comfortabele schoenen (we lopen wat tussen locaties)</li>
-          <li>Lichte jas of vest voor 's avonds</li>
-        </ul>
-        
-        <h3>Kleuren</h3>
-        <p>Alle kleuren zijn welkom! Onze bruiloftskleur is groen, dus als je twijfelt tussen twee outfits, kies dan voor die met een vleugje groen. 😉</p>
-        
-        <h3>Belangrijk</h3>
-        <p>Het allerbelangrijkste is dat je je goed voelt in wat je draagt. We kijken er naar uit om jullie te zien stralen!</p>
-        
-        <p>Liefs,<br>Selvan & Bertine</p>
+        <p>De daggasten hadden hun kaart al eerder -waar mogelijk persoonlijk- ontvangen en vanaf vandaag zijn ook alle avondgasten uitgenodigd!</p>
       `,
     },
   };

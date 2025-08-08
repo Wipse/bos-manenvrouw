@@ -22,12 +22,12 @@
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto space-y-12">
         <!-- Erehaag Section -->
-        <div class="flex gap-x-6">
+        <div class="flex flex-col lg:flex-row gap-6">
           <div
-            class="bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl p-8"
+            class="bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl p-8 lg:flex-1"
           >
             <div class="flex items-center gap-3 mb-6">
-              <div class="p-3 bg-primary-500 rounded-full">
+              <div class="p-3 pb-1 bg-primary-500 rounded-full">
                 <Icon name="mdi:heart" class="size-6 text-white" />
               </div>
               <div>
@@ -57,11 +57,11 @@
             </div>
           </div>
           <!-- Gemeentehuis Image -->
-          <div class="text-center h-fit">
+          <div class="text-center lg:w-80 lg:flex-shrink-0">
             <img
               src="/images/gemeentehuis_sellingen.jpeg"
               alt="Gemeentehuis Sellingen"
-              class="rounded-2xl w-full h-auto shadow-lg"
+              class="rounded-2xl w-full lg:h-auto shadow-lg"
             />
           </div>
         </div>
@@ -69,7 +69,7 @@
         <!-- Parkeren Section -->
         <div>
           <div class="flex items-center gap-3 mb-6">
-            <div class="p-3 bg-blue-500 rounded-full">
+            <div class="p-3 pb-1.5 bg-blue-500 rounded-full">
               <Icon name="mdi:car" class="size-6 text-white" />
             </div>
             <h2 class="text-2xl font-bold text-gray-900">
@@ -161,7 +161,7 @@
         <!-- Timeline Section -->
         <div>
           <div class="flex items-center gap-3 mb-8">
-            <div class="p-3 bg-primary-500 rounded-full">
+            <div class="p-3 pb-1.5 bg-primary-500 rounded-full">
               <Icon name="mdi:clock" class="size-6 text-white" />
             </div>
             <h2 class="text-2xl font-bold text-gray-900">

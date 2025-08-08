@@ -25,7 +25,7 @@
           </p>
         </div>
         <p class="text-primary-200 text-xs">
-          Met liefde gemaakt voor jullie speciale dag
+          Speciaal gemaakt voor deze speciale dag
         </p>
       </div>
     </div>

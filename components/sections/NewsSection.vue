@@ -10,7 +10,7 @@
         <div
           class="flex items-center justify-center md:justify-start gap-3 mb-1"
         >
-          <Heading title="Laatste nieuws" size="h2" is_bold />
+          <Heading title="Hej 't al eheurd?" size="h2" is_bold />
         </div>
         <div
           class="w-32 h-1 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full mx-auto md:ml-0 md:mr-auto mb-4"

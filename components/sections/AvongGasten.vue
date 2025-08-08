@@ -8,7 +8,7 @@
       <div class="flex flex-col md:grid md:grid-cols-12 h-full">
         <!-- Right side (content first on mobile) -->
         <div
-          class="md:col-span-5 md:col-start-8 flex flex-col justify-center md:justify-start md:pt-[25vh] text-center md:text-left md:order-2"
+          class="md:col-span-5 md:col-start-8 flex flex-col justify-center md:justify-start md:pt-[20vh] text-center md:text-left md:order-2"
         >
           <div class="w-fit mx-auto md:mx-0">
             <Heading title="Waar is dat feestje?" size="h2" is_bold />
@@ -44,7 +44,7 @@
 
         <!-- Left side (map second on mobile) -->
         <div
-          class="md:col-span-6 flex flex-col justify-center md:justify-start md:pt-[25vh] mt-8 md:mt-0 md:order-1"
+          class="md:col-span-6 flex flex-col justify-center md:justify-start md:pt-[20vh] mt-8 md:mt-0 md:order-1"
         >
           <GoogleMapsEmbed
             height="384"

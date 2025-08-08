@@ -22,7 +22,7 @@
             <span class="underline decoration-primary-500">alle</span> gasten!
           </p>
           <div class="flex justify-center md:justify-start">
-            <Button label="Belangrijke Informatie" to="#nieuws" />
+            <Button label="Belangrijke Informatie" to="/help" />
           </div>
         </div>
         <div class="md:col-span-6 mt-8 md:mt-0">
