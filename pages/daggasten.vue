@@ -56,12 +56,12 @@
               </p>
             </div>
           </div>
-          <!-- Gemeentehuis Image Placeholder -->
+          <!-- Gemeentehuis Image -->
           <div class="text-center h-fit">
             <img
-              src="../../images/gemeentehuis_sellingen.jpeg"
-              alt="Gemeentehuis"
-              class="rounded-2xl"
+              src="/images/gemeentehuis_sellingen.jpeg"
+              alt="Gemeentehuis Sellingen"
+              class="rounded-2xl w-full h-auto shadow-lg"
             />
           </div>
         </div>
@@ -93,12 +93,12 @@
             </p>
           </div>
 
-          <!-- Google Maps Placeholder -->
+          <!-- Sellingen Map -->
           <div class="rounded-2xl mb-6 text-center">
             <img
-              src="../../images/map_sellingen.png"
-              alt="Map Sellingen"
-              class="rounded-2xl"
+              src="/images/map_sellingen.png"
+              alt="Overzichtskaart Sellingen"
+              class="rounded-2xl w-full h-auto shadow-lg"
             />
           </div>
 
