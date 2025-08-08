@@ -18,20 +18,22 @@
           </div>
           <div class="flex items-center gap-1 justify-center md:justify-start">
             <Icon name="mdi:map-marker" class="size-6 text-primary-500" />
-            <p>Sellinger Church</p>
+            <p>Zaal Mulder, Hardenberg</p>
           </div>
           <div
             class="flex items-center gap-1.5 justify-center md:justify-start md:pl-0.5"
           >
             <Icon name="mdi:clock" class="size-5 text-primary-500" />
-            <p>11:30</p>
+            <p>20:30</p>
           </div>
-          <p class="leading-[24px] my-6 text-gray-700">
-            Wij - de cermoniemeesters - hebben twee ideeën bedacht voor tijdens
-            het feest. Om deze ideeën te laten slagen, hebben wij iedereen zijn
-            hulp nodig. Kunnen jullie ons helpen door de instructies op de
-            volgende pagina te volgen? Wij - de cermoniemeesters - hebben twee
-            ideeën bedacht voor tijdens het feest.
+          <p class="leading-[24px] mt-6 text-gray-700">
+            Superleuk dat jullie 's avonds op het bruiloftsfeest van Selvan &
+            Bertine aanwezig zijn! Iedereen die het bruidspaar een beetje kent,
+            weet dat zij wel van een feestje houden. Er is dan ook een geweldige
+            feestband geregeld, dus dat gaat hélemaal goedkomen!
+          </p>
+          <p class="leading-[24px] mt-2 mb-6 font-semibold text-gray-700">
+            Veel plezier en geniet ervan!
           </p>
           <Button
             label="Voor daggasten"
@@ -52,20 +54,13 @@
             <p class="font-heading font-bold text-lg">Vragen?</p>
             <div
               class="min-h-0.5 md:w-1/6 w-1/4 mx-auto md:mx-0 rounded-full bg-primary-500 mb-2"
-            ></div>
+            />
             <a
-              href="mailto:ceremoniemeester1@gmail.com"
+              href="mailto:eeltje.heida@chello.nl,elyseschonewille@hotmail.com"
               class="flex items-center gap-2 hover:underline decoration-primary-500 w-fit mx-auto md:mx-0"
             >
               <Icon name="mdi:email" class="size-5 text-primary-500" />
-              <p>ceremoniemeester1@gmail.com</p>
-            </a>
-            <a
-              href="mailto:ceremoniemeester1@gmail.com,ceremoniemeester2@gmail.com"
-              class="flex items-center gap-2 hover:underline decoration-primary-500 w-fit mx-auto md:mx-0"
-            >
-              <Icon name="mdi:email" class="size-5 text-primary-500" />
-              <p>Beide ceremoniemeesters</p>
+              <p>Ceremoniemeesters</p>
             </a>
           </div>
         </div>

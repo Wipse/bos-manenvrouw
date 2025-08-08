@@ -20,7 +20,7 @@ export default {
         },
       }),
       fontSize: {
-        h1: ["6rem", { lineHeight: "1.2", fontWeight: "700" }], // 96px
+        h1: ["4rem", { lineHeight: "1.2", fontWeight: "700" }], // 96px
         h2: ["2.25rem", { lineHeight: "1.3", fontWeight: "600" }], // 36px
         h3: ["1.875rem", { lineHeight: "1.4", fontWeight: "600" }], // 30px
         h4: ["1.5rem", { lineHeight: "1.4", fontWeight: "500" }], // 24px

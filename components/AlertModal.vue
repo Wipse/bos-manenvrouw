@@ -25,7 +25,7 @@
         >
           <!-- Header -->
           <div
-            class="relative bg-gradient-to-r from-primary-500 to-primary-600 text-white p-6 rounded-t-2xl"
+            class="relative bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-4 rounded-t-2xl"
           >
             <button
               @click="closeModal"
@@ -44,7 +44,6 @@
               </div>
               <div>
                 <h2 class="text-xl font-bold">Belangrijke informatie!</h2>
-                <p class="text-primary-100 text-sm">Even snel lezen...</p>
               </div>
             </div>
           </div>
@@ -52,10 +51,13 @@
           <!-- Content -->
           <div class="p-6 space-y-4">
             <p class="text-gray-700 leading-relaxed">
-              <strong class="text-gray-900">Let op!</strong> Er is belangrijke
-              informatie voor
-              <span class="text-primary-600 font-semibold">alle gasten</span>
-              die je absoluut moet weten voor de bruiloft.
+              <strong class="text-gray-900">Let op!</strong> deze website is
+              speciaal ontworpen omdat we
+              <span class="text-primary-600 font-semibold"
+                >jullie hulp nodig hebben</span
+              >
+              om met elkaar een onvergetelijke herinnering voor het bruidspaar
+              te creëren.
             </p>
 
             <div
@@ -68,8 +70,7 @@
             </div>
 
             <p class="text-gray-600 text-sm">
-              Klik hieronder om alle details te bekijken en te leren hoe je kunt
-              helpen.
+              Klik hieronder om alle details te bekijken.
             </p>
           </div>
 
@@ -79,7 +80,7 @@
               label="Bekijk"
               to="/help"
               class="flex-1 bg-primary-600 hover:bg-primary-700 text-white justify-center"
-              @click="closeModal"
+              @click="handleViewClick"
             />
             <button
               @click="closeModal"
@@ -106,6 +107,12 @@ const emit = defineEmits<{
 }>();
 
 const closeModal = () => {
+  emit("close");
+};
+
+const handleViewClick = () => {
+  // Emit close immediately when user clicks to view important info
+  // This ensures localStorage is set before navigation
   emit("close");
 };
 </script>

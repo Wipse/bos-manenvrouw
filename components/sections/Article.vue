@@ -2,7 +2,7 @@
   <section>
     <!-- Top Section -->
     <div
-      class="w-screen h-[65vh] overflow-hidden"
+      class="w-screen h-[45vh] overflow-hidden"
       style="
         background: linear-gradient(
           to bottom,
@@ -21,9 +21,9 @@
             class="min-h-1 md:w-1/2 w-3/4 mx-auto rounded-full bg-primary-500 mb-4 mt-2"
           ></div>
           <p class="leading-[26px] mb-6 text-center text-gray-700">
-            Welkom op de website van de bruiloft van Selvan en Bertine. Hier
-            vind je alle praktische informatie over hun huwelijksdag, of je nu
-            daggast of avondgast bent.
+            We gaan met z'n allen het bruidspaar verrassen en wel op twee
+            manieren! Om deze verrassingen te laten slagen, hebben wij
+            jou/jullie nodig!
           </p>
         </div>
       </div>
