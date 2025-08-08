@@ -19,7 +19,7 @@
           class="text-gray-600 max-w-3xl mx-auto md:mr-auto md:ml-0 leading-relaxed"
         >
           Blijf op de hoogte van alle updates, belangrijke informatie en leuke
-          weetjes over onze grote dag!
+          weetjes over de grote dag!
         </p>
       </div>
     </div>
