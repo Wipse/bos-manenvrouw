@@ -11,7 +11,7 @@
   >
     <div
       v-if="isOpen"
-      class="fixed inset-0 bg-black bg-opacity-50 z-40"
+      class="fixed inset-0 bg-black bg-opacity-50 z-60"
       @click="$emit('close')"
     ></div>
   </Transition>
@@ -28,7 +28,7 @@
   >
     <nav
       v-if="isOpen"
-      class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-50 overflow-y-auto"
+      class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-70 overflow-y-auto"
     >
       <div class="p-6 pt-20">
         <!-- Logo in mobile menu -->

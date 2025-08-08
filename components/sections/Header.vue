@@ -38,10 +38,10 @@
         </div>
       </div>
     </nav>
-
-    <!-- Mobile Navigation Modal -->
-    <MobileNavigation :isOpen="isMobileMenuOpen" @close="closeMobileMenu" />
   </header>
+
+  <!-- Mobile Navigation Modal - Outside header so it's always visible -->
+  <MobileNavigation :isOpen="isMobileMenuOpen" @close="closeMobileMenu" />
 </template>
 
 <script setup lang="ts">
