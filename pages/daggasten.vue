@@ -7,7 +7,7 @@
       <div class="max-w-3xl mx-auto">
         <Heading title="Daggasten" size="h1" />
         <div
-          class="min-h-1 md:w-1/2 w-3/4 mx-auto rounded-full bg-primary-500 mb-6 mt-2"
+          class="min-h-1 md:w-1/2 w-3/4 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-primary-600 mb-6 mt-2"
         ></div>
         <p class="leading-[26px] text-gray-700 text-lg">
           Alle praktische informatie voor een prachtige dag vol liefde en

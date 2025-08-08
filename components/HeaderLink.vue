@@ -75,7 +75,11 @@ const iconSizeClass = computed(() => {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: theme("colors.primary.500");
+  background: linear-gradient(
+    to right,
+    theme("colors.primary.400"),
+    theme("colors.primary.600")
+  );
   transition: width 0.3s ease-out;
 }
 

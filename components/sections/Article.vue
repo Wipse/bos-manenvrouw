@@ -18,7 +18,7 @@
         <div class="max-w-3xl mx-auto text-center">
           <Heading title="Hulp nodig!" size="h1" />
           <div
-            class="min-h-1 md:w-1/2 w-3/4 mx-auto rounded-full bg-primary-500 mb-4 mt-2"
+            class="min-h-1 md:w-1/2 w-3/4 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-primary-600 mb-4 mt-2"
           ></div>
           <p class="leading-[26px] mb-6 text-center text-gray-700">
             We gaan met z'n allen het bruidspaar verrassen en wel op twee
@@ -36,7 +36,7 @@
         <div class="max-w-4xl mx-auto md:col-span-8 md:col-start-3">
           <Heading title="Flashmob" size="h2" class="-mb-2" />
           <div
-            class="min-h-0.5 md:w-1/4 w-1/2 rounded-full bg-primary-500 mb-4 mt-2"
+            class="min-h-0.5 md:w-1/4 w-1/2 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 mb-4 mt-2"
           />
           <p class="leading-[26px] mb-6 text-gray-900">
             Ter verhoging van de feestvreugde in de avond gaan we rond 22 uur
@@ -79,7 +79,7 @@
         >
           <Heading title="Kaartje" size="h2" class="-mb-2" />
           <div
-            class="min-h-0.5 md:w-1/5 w-1/3 rounded-full bg-primary-500 mb-4 mt-2"
+            class="min-h-0.5 md:w-1/5 w-1/3 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 mb-4 mt-2"
           />
           <p class="leading-[26px] mb-6 text-gray-900">
             De tweede verrassing die we voor Selvan & Bertine in petto hebben,

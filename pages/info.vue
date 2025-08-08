@@ -1,7 +1,7 @@
 <template>
   <SectionsHeader />
   <SectionsMainHero />
-  <SectionsHelpNeeded />
+  <SectionsNewsSection />
   <SectionsAvongGasten />
   <SectionsFooter />
 

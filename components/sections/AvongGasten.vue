@@ -13,7 +13,7 @@
           <div class="w-fit mx-auto md:mx-0">
             <Heading title="Waar is dat feestje?" size="h2" is_bold />
             <div
-              class="min-h-[3px] md:w-5/6 w-full rounded-full bg-primary-500 mb-4"
+              class="min-h-[3px] md:w-5/6 w-full rounded-full bg-gradient-to-r from-primary-400 to-primary-600 mb-4"
             ></div>
           </div>
           <div class="flex items-center gap-1 justify-center md:justify-start">
@@ -53,7 +53,7 @@
           <div class="mt-10 text-center md:text-left">
             <p class="font-heading font-bold text-lg">Vragen?</p>
             <div
-              class="min-h-0.5 md:w-1/6 w-1/4 mx-auto md:mx-0 rounded-full bg-primary-500 mb-2"
+              class="min-h-0.5 md:w-1/6 w-1/4 mx-auto md:mx-0 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 mb-2"
             />
             <a
               href="mailto:eeltje.heida@chello.nl,elyseschonewille@hotmail.com"

@@ -38,7 +38,7 @@
 
         <!-- Navigation links -->
         <div class="space-y-4">
-          <MobileNavLink to="/info#help-needed" @click="$emit('close')">
+          <MobileNavLink to="/info#nieuws" @click="$emit('close')">
             Laatste nieuws
           </MobileNavLink>
 

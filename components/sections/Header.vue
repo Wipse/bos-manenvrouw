@@ -15,13 +15,13 @@
     <nav class="container mx-auto px-4">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
-        <div class="flex-shrink-0">
+        <NuxtLink class="flex-shrink-0" to="/info">
           <img src="/logo.svg" alt="Logo" :class="logoSizeClass" />
-        </div>
+        </NuxtLink>
 
         <!-- Desktop navigatie -->
         <div v-if="!isMobile" class="hidden md:flex items-center space-x-6">
-          <HeaderLink to="/info#help-needed"> Laatste nieuws </HeaderLink>
+          <HeaderLink to="/info#nieuws"> Laatste nieuws </HeaderLink>
           <HeaderLink to="/info#avond-gasten"> Avondgasten </HeaderLink>
           <HeaderLink to="/daggasten"> Daggasten </HeaderLink>
           <HeaderLink to="/help" :isRightSide="true">
