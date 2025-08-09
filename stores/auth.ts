@@ -22,7 +22,7 @@ export const useAuthStore = defineStore("auth", {
     },
 
     login(password: string) {
-      if (password === "123") {
+      if (password === "S&B101025") {
         this.isAuthenticated = true;
 
         // Save to localStorage
