@@ -45,6 +45,9 @@ const handleClick = async (event: MouseEvent) => {
   // Always emit click to close modal
   emit("click");
 
+  // Small delay to allow menu to close and scroll lock to be removed
+  await new Promise((resolve) => setTimeout(resolve, 100));
+
   // Try same-page smooth scroll first
   if (smoothScrollTo(props.to)) {
     return;
