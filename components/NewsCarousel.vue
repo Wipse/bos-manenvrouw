@@ -81,7 +81,7 @@ const newsItems = [
     slug: "website-live",
   },
   {
-    title: "Alle uitnodigingen zijn d'r uit!",
+    title: "Alle uitnodigingen zijn de deur uit!",
     date: "2025-08-15",
     image: "letterman.jpg",
     slug: "uitnodigingen-verstuurd",
