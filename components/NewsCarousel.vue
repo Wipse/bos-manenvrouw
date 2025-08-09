@@ -23,8 +23,11 @@
         </div>
       </div>
 
-      <!-- Navigation buttons -->
-      <nav class="flex items-center -my-14 gap-3 justify-center">
+      <!-- Navigation buttons - hidden on md+ when 2 or fewer items -->
+      <nav
+        class="flex items-center -my-14 gap-3 justify-center"
+        :class="{ 'md:hidden': newsItems.length <= 2 }"
+      >
         <button
           class="border-2 border-primary-600 rounded-full p-1.5 pb-0 hover:bg-primary-50 transition-colors duration-200"
           @click="scrollLeft"
@@ -73,15 +76,21 @@ const scrollRight = () => {
 const newsItems = [
   {
     title: "Website gaat de lucht in!!!",
-    date: "2025-09-08",
+    date: "2025-08-09",
     image: "mockup.png",
     slug: "website-live",
   },
   {
-    title: "Alle uitnodigingen zijn de deur uit!",
-    date: "2025-08-08",
+    title: "Alle uitnodigingen zijn d'r uit!",
+    date: "2025-08-15",
     image: "letterman.jpg",
     slug: "uitnodigingen-verstuurd",
+  },
+  {
+    title: "Heb je nog Wist-U-Datjes?",
+    date: "2025-08-10",
+    image: "diduknow.jpg",
+    slug: "wist-u-datje",
   },
 ];
 </script>

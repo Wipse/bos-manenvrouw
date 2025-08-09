@@ -114,6 +114,18 @@ const updateData = computed(() => {
         <p>De daggasten hadden hun kaart al eerder -waar mogelijk persoonlijk- ontvangen en vanaf vandaag zijn ook alle avondgasten uitgenodigd!</p>
       `,
     },
+    "wist-u-datje": {
+      title: "Heb je nog leuke Wist-U-Datjes?",
+      date: "2025-08-10",
+      image: "/images/diduknow.jpg",
+      content: `
+        <p>We zijn nog op zoek naar leuke Wist-U-Datjes! Heb je nog een leuk verhaal of feitje over Selvan of Bertine die geschikt is voor deze site? Laat het ons weten, wij horen het graag!</p>
+        <br/>
+        <a href="mailto:eeltje.heida@chello.nl,elyseschonewille@hotmail.com" class="underline hover:decoration-primary-500">
+          <p>Mail ons hier!</p> 
+        </a>
+      `,
+    },
   };
 
   return (
