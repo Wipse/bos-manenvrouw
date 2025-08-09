@@ -99,11 +99,11 @@ const handleLogin = () => {
   if (auth.login(password.value)) {
     router.push("/info");
   } else if (password.value === "") {
-    error.value = "Je moet eerst een wachtwoord invullen...";
+    error.value = "Je moet eerst een inlogcode invullen...";
     password.value = "";
   } else {
     error.value =
-      "Oeps, dit is niet het juiste wachtwoord... Heb je 'm goed uit de mail gekopieerd?";
+      "Oeps, dit is niet de juiste inlogcode... Heb je 'm goed ingetoetst?";
     password.value = "";
   }
 };
