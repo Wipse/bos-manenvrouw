@@ -74,13 +74,13 @@ const newsItems = [
   {
     title: "Website gaat de lucht in!!!",
     date: "2025-09-08",
-    image: "mainimage.jpeg",
+    image: "mockup.png",
     slug: "website-live",
   },
   {
     title: "Alle uitnodigingen zijn de deur uit!",
     date: "2025-08-08",
-    image: "Sellinger_Church.jpg",
+    image: "letterman.jpg",
     slug: "uitnodigingen-verstuurd",
   },
 ];

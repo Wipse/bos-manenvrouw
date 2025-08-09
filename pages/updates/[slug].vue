@@ -23,7 +23,7 @@
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
-          ></div>
+          />
         </div>
 
         <!-- Date badge -->
@@ -99,7 +99,7 @@ const updateData = computed(() => {
     "website-live": {
       title: "Website gaat de lucht in!!!",
       date: "2025-09-08",
-      image: "/images/mainimage.jpeg",
+      image: "/images/mockup.png",
       content: `
         <p>Het is gelukt! Vóórdat de avondgasten hun kaart in de bus hebben liggen. De websitebouwer (neef van Bertine) heeft heel erg z'n best gedaan om de deadline te halen. We zijn enorm blij met het resultaat.</p>
         
@@ -109,7 +109,7 @@ const updateData = computed(() => {
     "uitnodigingen-verstuurd": {
       title: "Alle uitnodigingen zijn de deur uit!",
       date: "2025-08-08",
-      image: "/images/Sellinger_Church.jpg",
+      image: "/images/letterman.jpg",
       content: `
         <p>De daggasten hadden hun kaart al eerder -waar mogelijk persoonlijk- ontvangen en vanaf vandaag zijn ook alle avondgasten uitgenodigd!</p>
       `,
