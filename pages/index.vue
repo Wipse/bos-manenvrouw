@@ -18,7 +18,9 @@
     >
       <div class="mx-auto w-full max-w-sm lg:w-96">
         <div class="mb-10">
-          <CloverIcon />
+          <div class="flex justify-start mb-6">
+            <img src="/logo.svg" alt="S&B Logo" class="h-12 w-auto" />
+          </div>
           <h1
             class="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900"
           >
