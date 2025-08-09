@@ -111,15 +111,15 @@ const updateData = computed(() => {
       date: "2025-08-15",
       image: "/images/letterman.jpg",
       content: `
-        <p>De daggasten hadden hun kaart al eerder -waar mogelijk persoonlijk- ontvangen en vanaf vandaag zijn ook alle avondgasten uitgenodigd!</p>
+        <p>De daggasten hebben hun kaart al eerder -waar mogelijk persoonlijk- ontvangen en vanaf vandaag zijn ook alle avondgasten uitgenodigd!</p>
       `,
     },
     "wist-je-datje": {
-      title: "We zijn nog op zoek naar meer leuke wist-je-datjes!",
+      title: "We zijn op zoek naar leuke wist-je-datjes!",
       date: "2025-08-10",
       image: "/images/diduknow.jpg",
       content: `
-        <p>Heb je nog leuke verhalen of feitjes over Selvan en/of Bertine, die geschikt zijn om in de feestgids te zetten? Laat het ons weten, wij horen het graag!</p>
+        <p>Heb je leuke verhalen of feitjes over Selvan en/of Bertine, die geschikt zijn om in de feestgids te zetten? Laat het ons weten, wij horen het graag!</p>
         <br/>
         <a href="mailto:eeltje.heida@chello.nl,elyseschonewille@hotmail.com" class="underline hover:decoration-primary-500">
           <p>Mail ons hier!</p> 
