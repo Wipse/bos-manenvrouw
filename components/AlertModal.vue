@@ -51,7 +51,7 @@
           <!-- Content -->
           <div class="p-6 space-y-4">
             <p class="text-gray-700 leading-relaxed">
-              <strong class="text-gray-900">Let op!</strong> deze website is
+              <strong class="text-gray-900">Let op!</strong> Deze website is
               speciaal ontworpen omdat we
               <span class="text-primary-600 font-semibold"
                 >jullie hulp nodig hebben</span
