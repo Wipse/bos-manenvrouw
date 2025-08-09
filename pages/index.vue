@@ -88,6 +88,13 @@ const error = ref("");
 const auth = useAuthStore();
 const router = useRouter();
 
+// Check if user is already authenticated and redirect
+onMounted(() => {
+  if (auth.isAuthenticated) {
+    router.push("/info");
+  }
+});
+
 const handleLogin = () => {
   if (auth.login(password.value)) {
     router.push("/info");

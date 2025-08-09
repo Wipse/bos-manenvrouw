@@ -8,7 +8,7 @@
         style="scroll-behavior: smooth; width: calc(100% + 2rem)"
       >
         <div
-          v-for="(newsItem, index) in newsItems"
+          v-for="(newsItem, index) in sortedNewsItems"
           :key="index"
           class="flex-shrink-0 w-72 md:w-80"
           :style="{ animationDelay: `${index * 100}ms` }"
@@ -26,7 +26,7 @@
       <!-- Navigation buttons - hidden on md+ when 2 or fewer items -->
       <nav
         class="flex items-center -my-14 gap-3 justify-center"
-        :class="{ 'md:hidden': newsItems.length <= 2 }"
+        :class="{ 'md:hidden': sortedNewsItems.length <= 2 }"
       >
         <button
           class="border-2 border-primary-600 rounded-full p-1.5 pb-0 hover:bg-primary-50 transition-colors duration-200"
@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 const scrollContainer = ref<HTMLElement | null>(null);
 
@@ -87,12 +87,21 @@ const newsItems = [
     slug: "uitnodigingen-verstuurd",
   },
   {
-    title: "Heb je nog Wist-U-Datjes?",
+    title: "Heb je nog wist-je-datjes?",
     date: "2025-08-10",
     image: "diduknow.jpg",
-    slug: "wist-u-datje",
+    slug: "wist-je-datje",
   },
 ];
+
+// Sort news items by date - newest first
+const sortedNewsItems = computed(() => {
+  return [...newsItems].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime(); // Newest first
+  });
+});
 </script>
 
 <style scoped>

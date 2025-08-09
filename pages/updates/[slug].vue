@@ -98,7 +98,7 @@ const updateData = computed(() => {
   const updates = {
     "website-live": {
       title: "Website gaat de lucht in!!!",
-      date: "2025-09-08",
+      date: "2025-08-09",
       image: "/images/mockup.png",
       content: `
         <p>Het is gelukt! Vóórdat de avondgasten hun kaart in de bus hebben liggen. De websitebouwer (neef van Bertine) heeft heel erg z'n best gedaan om de deadline te halen. We zijn enorm blij met het resultaat.</p>
@@ -108,18 +108,18 @@ const updateData = computed(() => {
     },
     "uitnodigingen-verstuurd": {
       title: "Alle uitnodigingen zijn de deur uit!",
-      date: "2025-08-08",
+      date: "2025-08-15",
       image: "/images/letterman.jpg",
       content: `
         <p>De daggasten hadden hun kaart al eerder -waar mogelijk persoonlijk- ontvangen en vanaf vandaag zijn ook alle avondgasten uitgenodigd!</p>
       `,
     },
-    "wist-u-datje": {
-      title: "Heb je nog leuke Wist-U-Datjes?",
+    "wist-je-datje": {
+      title: "We zijn nog op zoek naar meer leuke wist-je-datjes!",
       date: "2025-08-10",
       image: "/images/diduknow.jpg",
       content: `
-        <p>We zijn nog op zoek naar leuke Wist-U-Datjes! Heb je nog een leuk verhaal of feitje over Selvan of Bertine die geschikt is voor deze site? Laat het ons weten, wij horen het graag!</p>
+        <p>Heb je nog leuke verhalen of feitjes over Selvan en/of Bertine, die geschikt zijn om in de feestgids te zetten? Laat het ons weten, wij horen het graag!</p>
         <br/>
         <a href="mailto:eeltje.heida@chello.nl,elyseschonewille@hotmail.com" class="underline hover:decoration-primary-500">
           <p>Mail ons hier!</p> 
