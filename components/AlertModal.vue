@@ -78,16 +78,9 @@
           <div class="p-6 pt-0 flex flex-col sm:flex-row gap-3">
             <Button
               label="Bekijk"
-              to="/help"
               class="flex-1 bg-primary-600 hover:bg-primary-700 text-white justify-center"
               @click="handleViewClick"
             />
-            <button
-              @click="closeModal"
-              class="flex-1 px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors text-sm font-medium"
-            >
-              Later bekijken
-            </button>
           </div>
         </div>
       </div>
@@ -110,10 +103,16 @@ const closeModal = () => {
   emit("close");
 };
 
-const handleViewClick = () => {
+const handleViewClick = async () => {
   // Emit close immediately when user clicks to view important info
   // This ensures localStorage is set before navigation
   emit("close");
+
+  // Small delay to ensure the modal state is properly updated
+  await nextTick();
+
+  // Navigate to help page after modal is closed
+  await navigateTo("/help");
 };
 </script>
 

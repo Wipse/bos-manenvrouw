@@ -12,9 +12,9 @@
             />
           </div>
           <p class="leading-[26px] mb-6 text-gray-700">
-            Welkom op de website van de bruiloft van Selvan en Bertine. Hier
-            vind je alle praktische informatie over hun huwelijksdag, of je nu
-            daggast of avondgast bent.
+            Welkom op de website van de bruiloft van Selvan & Bertine. Hier vind
+            je alle informatie over hun huwelijksdag, of je nu daggast of
+            avondgast bent.
           </p>
           <p class="leading-[26px] mb-6 text-gray-700">
             Klik ook vooral even op de knop hieronder, want we hebben

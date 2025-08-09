@@ -1,7 +1,7 @@
 <template>
   <button
     @click="$emit('toggle')"
-    class="relative z-50 p-2 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg"
+    class="relative z-[10000] p-2 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg"
     :class="{ 'fixed top-4 right-4': isOpen }"
     aria-label="Menu toggle"
   >

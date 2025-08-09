@@ -13,7 +13,7 @@
           <Icon name="mdi:heart" class="size-5 text-white animate-pulse" />
         </div>
         <p class="text-primary-100 text-sm -mt-2">
-          10 oktober 2025 • Sellingen
+          10 oktober 2025 • Sellingen / Hardenberg
         </p>
       </div>
       <!-- Right side -->

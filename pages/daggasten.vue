@@ -8,7 +8,7 @@
         <Heading title="Daggasten" size="h1" />
         <div
           class="min-h-1 md:w-1/2 w-3/4 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-primary-600 mb-6 mt-2"
-        ></div>
+        />
         <p class="leading-[26px] text-gray-700 text-lg">
           Alle praktische informatie voor een prachtige dag vol liefde en
           plezier!
@@ -278,6 +278,21 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Vragen Section -->
+        <div class="pt-6 text-center">
+          <p class="font-heading font-bold text-lg">Vragen?</p>
+          <div
+            class="min-h-0.5 md:w-1/6 w-1/4 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-primary-600 mb-2"
+          />
+          <a
+            href="mailto:eeltje.heida@chello.nl,elyseschonewille@hotmail.com"
+            class="flex items-center gap-2 hover:underline decoration-primary-500 w-fit mx-auto"
+          >
+            <Icon name="mdi:email" class="size-5 text-primary-500" />
+            <p>Ceremoniemeesters</p>
+          </a>
         </div>
       </div>
     </div>

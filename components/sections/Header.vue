@@ -64,6 +64,69 @@ const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
 };
 
+// Body scroll lock when mobile menu is open
+let scrollPosition = 0;
+
+const lockBodyScroll = () => {
+  if (process.client) {
+    // Store current scroll position
+    scrollPosition = window.pageYOffset;
+
+    // Add styles to prevent scrolling
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = "100%";
+
+    // Prevent scrollbar jump
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+  }
+};
+
+const unlockBodyScroll = () => {
+  if (process.client) {
+    // Restore body styles
+    document.body.style.overflow = "";
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+    document.body.style.paddingRight = "";
+
+    // Restore scroll position
+    window.scrollTo(0, scrollPosition);
+  }
+};
+
+// Prevent touch scroll on mobile when menu is open
+const preventTouchMove = (e: TouchEvent) => {
+  if (isMobileMenuOpen.value) {
+    e.preventDefault();
+  }
+};
+
+// Watch mobile menu state and toggle body scroll
+watch(isMobileMenuOpen, (isOpen) => {
+  if (isOpen) {
+    lockBodyScroll();
+    // Add touch event listener for mobile devices
+    if (process.client) {
+      document.addEventListener("touchmove", preventTouchMove, {
+        passive: false,
+      });
+    }
+  } else {
+    unlockBodyScroll();
+    // Remove touch event listener
+    if (process.client) {
+      document.removeEventListener("touchmove", preventTouchMove);
+    }
+  }
+});
+
 // Enhanced scroll detection voor glasmorphism en hide/show
 const handleScroll = () => {
   if (process.client) {
@@ -95,6 +158,10 @@ onMounted(() => {
 onUnmounted(() => {
   if (process.client) {
     window.removeEventListener("scroll", handleScroll);
+    // Remove touch event listener if still active
+    document.removeEventListener("touchmove", preventTouchMove);
+    // Ensure body scroll is restored when component is unmounted
+    unlockBodyScroll();
   }
 });
 
