@@ -121,7 +121,7 @@ const updateData = computed(() => {
       content: `
         <p>Heb je leuke verhalen of feitjes over Selvan en/of Bertine, die geschikt zijn om in de feestgids te zetten? Laat het ons weten, wij horen het graag!</p>
         <br/>
-        <a href="mailto:eeltje.heida@chello.nl,elyseschonewille@hotmail.com" class="underline hover:decoration-primary-500">
+        <a href="mailto:eeltje.heida@chello.nl,elyseschonewille@hotmail.com" class="underline w-fit hover:decoration-primary-500">
           <p>Mail ons hier!</p> 
         </a>
       `,
