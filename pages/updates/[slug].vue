@@ -107,11 +107,12 @@ const updateData = computed(() => {
       `,
     },
     "uitnodigingen-verstuurd": {
-      title: "Alle uitnodigingen zijn de deur uit!",
-      date: "2025-08-15",
-      image: "/images/letterman.jpg",
+      title: "Geen bruiloftsfeest zonder gasten!",
+      date: "2025-08-13",
+      image: "/images/Cards_Sending.jpeg",
       content: `
-        <p>De daggasten hebben hun kaart al eerder -waar mogelijk persoonlijk- ontvangen en vanaf vandaag zijn ook alle avondgasten uitgenodigd!</p>
+        <p>Selvan & Bertine hebben op verschillende momenten zoveel mogelijk zelf de uitnodigingen rondgebracht, zodat ze zeker weten dat jullie de kaart ontvangen! Dat je dit nu leest, betekent dat dat inderdaad gelukt is! 😉 </p>
+        <p class="mt-2"> Op de foto is het bruidspaar druk bezig met het vouwen en schrijven van de kaarten. Met de hulp van maar liefst 2 schoonzussen is deze flinke klus geklaard! 😊 </p>
       `,
     },
     "wist-je-datje": {

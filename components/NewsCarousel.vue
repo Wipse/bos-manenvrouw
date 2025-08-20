@@ -81,9 +81,9 @@ const newsItems = [
     slug: "website-live",
   },
   {
-    title: "Alle uitnodigingen zijn de deur uit!",
-    date: "2025-08-15",
-    image: "letterman.jpg",
+    title: "Geen bruiloftsfeest zonder gasten!",
+    date: "2025-08-13",
+    image: "Cards_Sending.jpeg",
     slug: "uitnodigingen-verstuurd",
   },
   {
