@@ -14,16 +14,46 @@
 
       <!-- Article content -->
       <article class="prose prose-lg max-w-none">
-        <!-- Header image -->
+        <!-- Header video or image -->
         <div class="relative mb-8 rounded-2xl overflow-hidden shadow-lg">
-          <img
-            :src="updateData.image"
-            :alt="updateData.title"
-            class="w-full h-64 md:h-80 object-cover"
-          />
+          <!-- Video als er een video is -->
           <div
-            class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
-          />
+            v-if="updateData.videos && updateData.videos.length > 0"
+            class="w-full aspect-video"
+          >
+            <!-- YouTube embed -->
+            <iframe
+              v-if="isYouTubeEmbed(updateData.videos[0])"
+              :src="updateData.videos[0]"
+              :title="updateData.title"
+              class="w-full h-full"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            />
+            <!-- Local video file -->
+            <video
+              v-else
+              :src="updateData.videos[0]"
+              class="w-full h-full object-cover"
+              controls
+              preload="metadata"
+            >
+              Je browser ondersteunt geen video afspelen.
+            </video>
+          </div>
+
+          <!-- Image als er geen video is -->
+          <template v-else>
+            <img
+              :src="updateData.image"
+              :alt="updateData.title"
+              class="w-full h-64 md:h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+            />
+          </template>
         </div>
 
         <!-- Date badge -->
@@ -77,6 +107,15 @@
 <script setup lang="ts">
 import { SectionsHeader } from "#components";
 
+type UpdateData = {
+  title: string;
+  date: string;
+  image: string;
+  carouselImage?: string;
+  content: string;
+  videos?: string[];
+};
+
 const route = useRoute();
 const slug = route.params.slug as string;
 
@@ -93,13 +132,46 @@ const navigateToNews = async () => {
   await navigateTo("/info#nieuws");
 };
 
+// Check if video URL is a YouTube embed
+const isYouTubeEmbed = (url: string): boolean => {
+  return url.includes("youtube.com/embed/") || url.includes("youtu.be/");
+};
+
 // Sample update data - in een echte app zou dit van een API komen
 const updateData = computed(() => {
-  const updates = {
+  const updates: Record<string, UpdateData> = {
+    "jouw-oefenfilmpje": {
+      title: "Stuur ons ook joúw oefenfilmpje!",
+      date: "2025-08-30",
+      image: "/images/danceparty.jpg",
+      content: `
+       <p class="mt-2 md:mt-0">Het vorige filmpje heeft ons geïnspireerd om jullie te vragen om ook jullie oefeningen met ons allemaal te delen 😊</p>
+<p class="mt-2 md:mt-0">Aan de ene kant om elkaar een hart onder de riem te steken en aan de andere kant als mooie herinnering voor het bruidspaar.</p>
+<p class="mt-2 md:mt-0">Het kan niet anders dan dat het enorm genieten is voor hen als ze na hun bruiloft horen dat er een website voor hun mooiste dag bestaat en ze daar jullie filmpjes kunnen zien!</p>
+<br/>
+<p class="mt-2 md:mt-0">Stuur ons daarom jullie filmpje via de app of mail en onze webmaster zet het onder dit bericht.</p>
+
+      `,
+      videos: ["https://www.youtube.com/embed/U0hJofD9aOA"],
+    },
+    "druk-aan-het-oefenen": {
+      title: "Druk aan het oefenen!?",
+      date: "2025-08-23",
+      image: "/images/Cards_Sending.jpeg",
+      carouselImage: "/images/mockup.png",
+      content: `
+         <p class="mt-2 md:mt-0">Zoals op het filmpje te zien is, wordt er al druk geoefend voor de flashmob.</p>
+        <p class="mt-2 md:mt-0">Hier zien jullie een tante en een nichtje van Selvan in actie.</p>
+        <p class="mt-2 md:mt-0">En jij/jullie? Ook al een poging gedaan?</p>
+        <p class="mt-2 md:mt-0">Je laat het je toch niet gebeuren dat jij straks uit de toon valt, omdat je de pasjes niet kent? 😉</p>
+        `,
+      videos: ["/videos/roelie.mp4"],
+    },
     "website-live": {
       title: "Website gaat de lucht in!!!",
       date: "2025-08-09",
       image: "/images/mockup.png",
+      carouselImage: "/images/mockup.png",
       content: `
         <p>Het is gelukt! Vóórdat de avondgasten hun kaart in de bus hebben liggen. De websitebouwer (neef van Bertine) heeft heel erg z'n best gedaan om de deadline te halen. We zijn enorm blij met het resultaat.</p>
         
@@ -114,27 +186,30 @@ const updateData = computed(() => {
         <p>Selvan & Bertine hebben op verschillende momenten zoveel mogelijk zelf de uitnodigingen rondgebracht, zodat ze zeker weten dat jullie de kaart ontvangen! Dat je dit nu leest, betekent dat dat inderdaad gelukt is! 😉 </p>
         <p class="mt-2"> Op de foto is het bruidspaar druk bezig met het vouwen en schrijven van de kaarten. Met de hulp van maar liefst 2 schoonzussen is deze flinke klus geklaard! 😊 </p>
       `,
+      videos: [],
     },
     "wist-je-datje": {
       title: "We zijn op zoek naar leuke wist-je-datjes!",
       date: "2025-08-10",
       image: "/images/diduknow.jpg",
       content: `
-        <p>Heb je leuke verhalen of feitjes over Selvan en/of Bertine, die geschikt zijn om in de feestgids te zetten? Laat het ons weten, wij horen het graag!</p>
+        <p>Heb je leuke verhalen of feitjes over Selvan en/of Bertine, die geschikt zijn om in de feestgids te zetten? Laat het ous weten, wij horen het graag!</p>
         <br/>
         <a href="mailto:eeltje.heida@chello.nl,elyseschonewille@hotmail.com" class="underline w-fit hover:decoration-primary-500">
-          <p>Mail ons hier!</p> 
+          <p>Mail ous hier!</p> 
         </a>
       `,
+      videos: [],
     },
   };
 
   return (
-    updates[slug as keyof typeof updates] || {
+    updates[slug] || {
       title: "Update niet gevonden",
       date: "2025-01-01",
       image: "/images/mainimage.jpeg",
       content: "<p>Deze update bestaat niet of is niet meer beschikbaar.</p>",
+      videos: [],
     }
   );
 });
@@ -180,5 +255,28 @@ useHead({
 
 .prose strong {
   @apply font-semibold text-gray-900;
+}
+
+/* Video aspect ratio */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+/* Fallback for older browsers */
+@supports not (aspect-ratio: 16 / 9) {
+  .aspect-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+  }
+
+  .aspect-video iframe,
+  .aspect-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>
