@@ -140,17 +140,31 @@ const isYouTubeEmbed = (url: string): boolean => {
 // Sample update data - in een echte app zou dit van een API komen
 const updateData = computed(() => {
   const updates: Record<string, UpdateData> = {
+    "de-spanning-stijgt": {
+      title: "De spanning stijgt!",
+      date: "2025-09-02",
+      image: "/images/second_meeting.jpeg",
+      content: `
+     <p> Het is september! De maand vóór 'trouwmaand' oktober.</p>
+     <p> De spanning neemt toe, maar het bruidspaar zorgt ook goed  voor ontspanningsmomenten. </p>
+     <br/>
+     <p> Momenteel is het voor hen het meest spannend wanneer nou precies dat vrijgezellenfeest is!🤣 </p>
+     <p> Tja…dat je dat niet weet, dát is nou precies het leuke van dat feest! Iets met planning en controle en loslaten…😉 </p>
+     <br/>
+     <p> De foto is zondagmiddag 31 augustus gemaakt tijdens het 2e live-overleg met de ceremoniemeesters. </p>
+     `,
+      videos: [],
+    },
     "jouw-oefenfilmpje": {
       title: "Stuur ons ook joúw oefenfilmpje!",
       date: "2025-08-30",
       image: "/images/danceparty.jpg",
       content: `
-       <p class="mt-2 md:mt-0">Het vorige filmpje heeft ons geïnspireerd om jullie te vragen om ook jullie oefeningen met ons allemaal te delen 😊</p>
-<p class="mt-2 md:mt-0">Aan de ene kant om elkaar een hart onder de riem te steken en aan de andere kant als mooie herinnering voor het bruidspaar.</p>
-<p class="mt-2 md:mt-0">Het kan niet anders dan dat het enorm genieten is voor hen als ze na hun bruiloft horen dat er een website voor hun mooiste dag bestaat en ze daar jullie filmpjes kunnen zien!</p>
-<br/>
-<p class="mt-2 md:mt-0">Stuur ons daarom jullie filmpje via de app of mail en onze webmaster zet het onder dit bericht.</p>
-
+        <p class="mt-2 md:mt-0">Het vorige filmpje heeft ons geïnspireerd om jullie te vragen om ook jullie oefeningen met ons allemaal te delen 😊</p>
+        <p class="mt-2 md:mt-0">Aan de ene kant om elkaar een hart onder de riem te steken en aan de andere kant als mooie herinnering voor het bruidspaar.</p>
+        <p class="mt-2 md:mt-0">Het kan niet anders dan dat het enorm genieten is voor hen als ze na hun bruiloft horen dat er een website voor hun mooiste dag bestaat en ze daar jullie filmpjes kunnen zien!</p>
+        <br/>
+        <p class="mt-2 md:mt-0">Stuur ons daarom jullie filmpje via de app of mail en onze webmaster zet het onder dit bericht.</p>
       `,
       videos: ["https://www.youtube.com/embed/U0hJofD9aOA"],
     },

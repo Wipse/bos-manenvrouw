@@ -75,6 +75,12 @@ const scrollRight = () => {
 // Sample news data - in een echte app zou dit via props of API komen
 const newsItems = [
   {
+    title: "De spanning stijgt!",
+    date: "2025-09-02",
+    image: "second_meeting.jpeg",
+    slug: "de-spanning-stijgt",
+  },
+  {
     title: "Stuur ons ook joúw oefenfilmpje!",
     date: "2025-08-30",
     image: "danceparty.jpg",
