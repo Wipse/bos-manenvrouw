@@ -140,18 +140,32 @@ const isYouTubeEmbed = (url: string): boolean => {
 // Sample update data - in een echte app zou dit van een API komen
 const updateData = computed(() => {
   const updates: Record<string, UpdateData> = {
+    wegafsluiting: {
+      title: "Meer reistijd door wegafsluiting!",
+      date: "2025-09-08",
+      image: "/images/roadblock.jpeg",
+      content: `
+        <p>Op de dag van de bruiloft is de Ter Apelerstraat, vanuit Ter Apel naar Sellingen, afgesloten vanaf het gehucht Ter Wisch.</p>
+        <p class="mt-2 md:mt-0">Middels borden wordt er een alternatieve route door de Sellingerbeetse (ook een gehucht bij Sellingen) aangegeven die je kunt volgen.</p>
+        <p class="mt-2 md:mt-0 font-bold text-red-700">De extra reistijd is hooguit 5 minuten.</p>
+        <br/>
+        <p class="mt-2 md:mt-0">Dit valt op zich natuurlijk heel erg mee, maar we willen jullie bij voorbaat informeren, zodat het op de ochtend zelf geen stress geeft als je voor een afgesloten weg komt te staan.</p>
+        <br/>
+        <p class="mt-2 md:mt-0">Ondanks de gele omleidingsborden langs de provinciale weg Emmen- Veendam (N366, A.G. Wildervanckweg) ter hoogte van het COA Ter Apel, is het de kortste weg om gewoon de afslag Sellingen te nemen en de normale route naar Sellingen te rijden. Je komt dan vanzelf op het punt wat hierboven op de foto staat.</p>
+      `,
+    },
     "de-spanning-stijgt": {
       title: "De spanning stijgt!",
       date: "2025-09-02",
       image: "/images/second_meeting.jpeg",
       content: `
-     <p> Het is september! De maand vóór 'trouwmaand' oktober.</p>
-     <p> De spanning neemt toe, maar het bruidspaar zorgt ook goed  voor ontspanningsmomenten. </p>
-     <br/>
-     <p> Momenteel is het voor hen het meest spannend wanneer nou precies dat vrijgezellenfeest is!🤣 </p>
-     <p> Tja…dat je dat niet weet, dát is nou precies het leuke van dat feest! Iets met planning en controle en loslaten…😉 </p>
-     <br/>
-     <p> De foto is zondagmiddag 31 augustus gemaakt tijdens het 2e live-overleg met de ceremoniemeesters. </p>
+        <p> Het is september! De maand vóór 'trouwmaand' oktober.</p>
+        <p> De spanning neemt toe, maar het bruidspaar zorgt ook goed  voor ontspanningsmomenten. </p>
+        <br/>
+        <p> Momenteel is het voor hen het meest spannend wanneer nou precies dat vrijgezellenfeest is!🤣 </p>
+        <p> Tja…dat je dat niet weet, dát is nou precies het leuke van dat feest! Iets met planning en controle en loslaten…😉 </p>
+        <br/>
+        <p> De foto is zondagmiddag 31 augustus gemaakt tijdens het 2e live-overleg met de ceremoniemeesters. </p>
      `,
       videos: [],
     },
@@ -174,7 +188,7 @@ const updateData = computed(() => {
       image: "/images/Cards_Sending.jpeg",
       carouselImage: "/images/mockup.png",
       content: `
-         <p class="mt-2 md:mt-0">Zoals op het filmpje te zien is, wordt er al druk geoefend voor de flashmob.</p>
+        <p class="mt-2 md:mt-0">Zoals op het filmpje te zien is, wordt er al druk geoefend voor de flashmob.</p>
         <p class="mt-2 md:mt-0">Hier zien jullie een tante en een nichtje van Selvan in actie.</p>
         <p class="mt-2 md:mt-0">En jij/jullie? Ook al een poging gedaan?</p>
         <p class="mt-2 md:mt-0">Je laat het je toch niet gebeuren dat jij straks uit de toon valt, omdat je de pasjes niet kent? 😉</p>
@@ -188,7 +202,6 @@ const updateData = computed(() => {
       carouselImage: "/images/mockup.png",
       content: `
         <p>Het is gelukt! Vóórdat de avondgasten hun kaart in de bus hebben liggen. De websitebouwer (neef van Bertine) heeft heel erg z'n best gedaan om de deadline te halen. We zijn enorm blij met het resultaat.</p>
-        
         <p class="mt-2">3 hoeraatjes voor Wisse!!</p>
       `,
     },
