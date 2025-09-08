@@ -75,7 +75,7 @@ const scrollRight = () => {
 // News Items
 const newsItems = [
   {
-    title: "Meer reistijd door wegafsluiting!",
+    title: "Meer reistijd door wegafsluiting",
     date: "2025-09-08",
     image: "roadblock.jpeg",
     slug: "wegafsluiting",
