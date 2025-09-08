@@ -34,12 +34,14 @@
             <!-- Local video file -->
             <video
               v-else
-              :src="updateData.videos[0]"
               class="w-full h-full object-cover"
               controls
               preload="metadata"
+              playsinline
+              webkit-playsinline
             >
-              Je browser ondersteunt geen video afspelen.
+              <source :src="updateData.videos[0]" type="video/mp4" />
+              <p>Je browser ondersteunt geen video's afspelen.</p>
             </video>
           </div>
 
