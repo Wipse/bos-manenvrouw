@@ -72,55 +72,19 @@ const scrollRight = () => {
   }
 };
 
-// News Items
-const newsItems = [
-  {
-    title: "Meer reistijd door wegafsluiting",
-    date: "2025-09-08",
-    image: "roadblock.jpeg",
-    slug: "wegafsluiting",
-  },
-  {
-    title: "De spanning stijgt!",
-    date: "2025-09-02",
-    image: "second_meeting.jpeg",
-    slug: "de-spanning-stijgt",
-  },
-  {
-    title: "Stuur ons ook joúw oefenfilmpje!",
-    date: "2025-08-30",
-    image: "danceparty.jpg",
-    slug: "jouw-oefenfilmpje",
-  },
-  {
-    title: "Druk aan het oefenen!?",
-    date: "2025-08-23",
-    image: "danstante.png",
-    slug: "druk-aan-het-oefenen",
-  },
-  {
-    title: "Website gaat de lucht in!!!",
-    date: "2025-08-09",
-    image: "mockup.png",
-    slug: "website-live",
-  },
-  {
-    title: "Geen bruiloftsfeest zonder gasten!",
-    date: "2025-08-13",
-    image: "Cards_Sending.jpeg",
-    slug: "uitnodigingen-verstuurd",
-  },
-  {
-    title: "Heb je nog wist-je-datjes?",
-    date: "2025-08-10",
-    image: "diduknow.jpg",
-    slug: "wist-je-datje",
-  },
-];
+// Use news content composable
+const { getNewsMetadata } = useNewsContent();
+
+// Load news metadata
+const { data: newsItems } = await useAsyncData(
+  "news-metadata",
+  getNewsMetadata
+);
 
 // Sort news items by date - newest first
 const sortedNewsItems = computed(() => {
-  return [...newsItems].sort((a, b) => {
+  if (!newsItems.value) return [];
+  return [...newsItems.value].sort((a, b) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
     return dateB.getTime() - dateA.getTime(); // Newest first

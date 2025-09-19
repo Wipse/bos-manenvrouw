@@ -14,18 +14,21 @@
 
       <!-- Article content -->
       <article class="prose prose-lg max-w-none">
-        <!-- Header video or image -->
-        <div class="relative mb-8 rounded-2xl overflow-hidden shadow-lg">
+        <!-- Header video or image - Full width layout -->
+        <div
+          v-if="!updateData?.has_side_image"
+          class="relative mb-8 rounded-2xl overflow-hidden shadow-lg"
+        >
           <!-- Video als er een video is -->
           <div
-            v-if="updateData.videos && updateData.videos.length > 0"
+            v-if="updateData?.videos && updateData.videos.length > 0"
             class="w-full aspect-video"
           >
             <!-- YouTube embed -->
             <iframe
               v-if="isYouTubeEmbed(updateData.videos[0])"
               :src="updateData.videos[0]"
-              :title="updateData.title"
+              :title="updateData?.title"
               class="w-full h-full"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -40,7 +43,7 @@
               playsinline
               webkit-playsinline
             >
-              <source :src="updateData.videos[0]" type="video/mp4" />
+              <source :src="updateData?.videos[0]" type="video/mp4" />
               <p>Je browser ondersteunt geen video's afspelen.</p>
             </video>
           </div>
@@ -48,8 +51,8 @@
           <!-- Image als er geen video is -->
           <template v-else>
             <img
-              :src="updateData.image"
-              :alt="updateData.title"
+              :src="updateData?.image"
+              :alt="updateData?.title"
               class="w-full h-64 md:h-80 object-cover"
             />
             <div
@@ -61,8 +64,8 @@
         <!-- Date badge -->
         <div class="flex items-center gap-2 text-gray-600 mb-4">
           <Icon name="mdi:calendar" class="size-5" />
-          <time :datetime="updateData.date" class="text-sm font-medium">
-            {{ formatDate(updateData.date) }}
+          <time :datetime="updateData?.date" class="text-sm font-medium">
+            {{ formatDate(updateData?.date || "") }}
           </time>
         </div>
 
@@ -70,18 +73,134 @@
         <h1
           class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight"
         >
-          {{ updateData.title }}
+          {{ updateData?.title }}
         </h1>
 
-        <!-- Content -->
-        <div class="text-gray-700 leading-relaxed space-y-6">
-          <div v-html="updateData.content"></div>
+        <!-- Side image layout - Grid 6-6 -->
+        <div
+          v-if="updateData?.has_side_image"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8"
+        >
+          <!-- Content Part 1 - 6 columns -->
+          <div class="text-gray-700 leading-relaxed space-y-6">
+            <div
+              v-html="updateData?.content_part_1 || updateData?.content"
+            ></div>
+          </div>
+
+          <!-- Side image - 6 columns -->
+          <div>
+            <div class="sticky top-8">
+              <!-- Video als er een video is -->
+              <div
+                v-if="updateData?.videos && updateData.videos.length > 0"
+                class="relative rounded-2xl overflow-hidden shadow-lg"
+              >
+                <div class="w-full aspect-video">
+                  <!-- YouTube embed -->
+                  <iframe
+                    v-if="isYouTubeEmbed(updateData.videos[0])"
+                    :src="updateData.videos[0]"
+                    :title="updateData?.title"
+                    class="w-full h-full"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  />
+                  <!-- Local video file -->
+                  <video
+                    v-else
+                    class="w-full h-full object-cover"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    webkit-playsinline
+                  >
+                    <source :src="updateData?.videos[0]" type="video/mp4" />
+                    <p>Je browser ondersteunt geen video's afspelen.</p>
+                  </video>
+                </div>
+              </div>
+
+              <!-- Image als er geen video is -->
+              <div
+                v-else
+                class="relative rounded-2xl overflow-hidden shadow-lg"
+              >
+                <img
+                  :src="updateData?.image"
+                  :alt="updateData?.title"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Part 2 - Full width after side image -->
+        <div
+          v-if="updateData?.has_side_image && updateData?.content_part_2"
+          class="text-gray-700 leading-relaxed space-y-6 mb-8"
+        >
+          <div v-html="updateData.content_part_2"></div>
+        </div>
+
+        <!-- Regular content layout (when no side image) -->
+        <div
+          v-if="!updateData?.has_side_image"
+          class="text-gray-700 leading-relaxed space-y-6"
+        >
+          <div v-html="updateData?.content"></div>
+        </div>
+
+        <!-- Bottom video section -->
+        <div
+          v-if="updateData?.bottom_video && updateData.bottom_video.length > 0"
+          class="mt-12"
+        >
+          <!-- Gradient line separator -->
+          <div
+            class="w-full h-px bg-gradient-to-r from-transparent via-primary-300 to-transparent mb-8"
+          />
+
+          <div class="relative rounded-2xl overflow-hidden shadow-lg mb-8">
+            <div class="w-full aspect-video">
+              <!-- YouTube embed -->
+              <iframe
+                v-if="isYouTubeEmbed(updateData.bottom_video[0])"
+                :src="updateData.bottom_video[0]"
+                :title="updateData?.title + ' - Video'"
+                class="w-full h-full"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              />
+              <!-- Local video file -->
+              <video
+                v-else
+                class="w-full h-screen object-cover"
+                controls
+                preload="metadata"
+                playsinline
+                webkit-playsinline
+              >
+                <source :src="updateData.bottom_video[0]" type="video/mp4" />
+                <p>Je browser ondersteunt geen video's afspelen.</p>
+              </video>
+            </div>
+          </div>
         </div>
 
         <!-- Share section -->
         <div class="mt-12 pt-8">
-          <!-- Gradient line separator -->
+          <!-- Gradient line separator (only if no bottom video) -->
           <div
+            v-if="
+              !updateData?.bottom_video || updateData.bottom_video.length === 0
+            "
             class="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-8"
           ></div>
           <div class="flex items-center justify-between">
@@ -109,20 +228,14 @@
 <script setup lang="ts">
 import { SectionsHeader } from "#components";
 
-type UpdateData = {
-  title: string;
-  date: string;
-  image: string;
-  carouselImage?: string;
-  content: string;
-  videos?: string[];
-};
-
 const route = useRoute();
 const slug = route.params.slug as string;
 
+// Use news content composable
+const { loadNewsContent } = useNewsContent();
+
 // Use smooth scroll functionality like menu items
-const { smoothScrollTo, navigateAndScrollTo } = useSmoothScroll();
+const { navigateAndScrollTo } = useSmoothScroll();
 
 const navigateToNews = async () => {
   // Try cross-page navigation with scroll
@@ -139,109 +252,25 @@ const isYouTubeEmbed = (url: string): boolean => {
   return url.includes("youtube.com/embed/") || url.includes("youtu.be/");
 };
 
-// Sample update data - in een echte app zou dit van een API komen
-const updateData = computed(() => {
-  const updates: Record<string, UpdateData> = {
-    wegafsluiting: {
-      title: "Meer reistijd door wegafsluiting!",
-      date: "2025-09-08",
-      image: "/images/roadblock.jpeg",
-      content: `
-        <p>Op de dag van de bruiloft is de Ter Apelerstraat, vanuit Ter Apel naar Sellingen, afgesloten vanaf het gehucht Ter Wisch.</p>
-        <p class="mt-2 md:mt-0">Middels borden wordt er een alternatieve route door de Sellingerbeetse (ook een gehucht bij Sellingen) aangegeven die je kunt volgen.</p>
-        <p class="mt-2 md:mt-0 font-bold text-red-700">De extra reistijd is hooguit 5 minuten.</p>
-        <br/>
-        <p class="mt-2 md:mt-0">Dit valt op zich natuurlijk heel erg mee, maar we willen jullie bij voorbaat informeren, zodat het op de ochtend zelf geen stress geeft als je voor een afgesloten weg komt te staan.</p>
-        <br/>
-        <p class="mt-2 md:mt-0">Ondanks de gele omleidingsborden langs de provinciale weg Emmen- Veendam (N366, A.G. Wildervanckweg) ter hoogte van het COA Ter Apel, is het de kortste weg om gewoon de afslag Sellingen te nemen en de normale route naar Sellingen te rijden. Je komt dan vanzelf op het punt wat hierboven op de foto staat.</p>
-      `,
-    },
-    "de-spanning-stijgt": {
-      title: "De spanning stijgt!",
-      date: "2025-09-02",
-      image: "/images/second_meeting.jpeg",
-      content: `
-        <p> Het is september! De maand vóór 'trouwmaand' oktober.</p>
-        <p> De spanning neemt toe, maar het bruidspaar zorgt ook goed  voor ontspanningsmomenten. </p>
-        <br/>
-        <p> Momenteel is het voor hen het meest spannend wanneer nou precies dat vrijgezellenfeest is!🤣 </p>
-        <p> Tja…dat je dat niet weet, dát is nou precies het leuke van dat feest! Iets met planning en controle en loslaten…😉 </p>
-        <br/>
-        <p> De foto is zondagmiddag 31 augustus gemaakt tijdens het 2e live-overleg met de ceremoniemeesters. </p>
-     `,
-      videos: [],
-    },
-    "jouw-oefenfilmpje": {
-      title: "Stuur ons ook joúw oefenfilmpje!",
-      date: "2025-08-30",
-      image: "/images/danceparty.jpg",
-      content: `
-        <p class="mt-2 md:mt-0">Het vorige filmpje heeft ons geïnspireerd om jullie te vragen om ook jullie oefeningen met ons allemaal te delen 😊</p>
-        <p class="mt-2 md:mt-0">Aan de ene kant om elkaar een hart onder de riem te steken en aan de andere kant als mooie herinnering voor het bruidspaar.</p>
-        <p class="mt-2 md:mt-0">Het kan niet anders dan dat het enorm genieten is voor hen als ze na hun bruiloft horen dat er een website voor hun mooiste dag bestaat en ze daar jullie filmpjes kunnen zien!</p>
-        <br/>
-        <p class="mt-2 md:mt-0">Stuur ons daarom jullie filmpje via de app of mail en onze webmaster zet het onder dit bericht.</p>
-      `,
-      videos: ["https://www.youtube.com/embed/U0hJofD9aOA"],
-    },
-    "druk-aan-het-oefenen": {
-      title: "Druk aan het oefenen!?",
-      date: "2025-08-23",
-      image: "/images/Cards_Sending.jpeg",
-      carouselImage: "/images/mockup.png",
-      content: `
-        <p class="mt-2 md:mt-0">Zoals op het filmpje te zien is, wordt er al druk geoefend voor de flashmob.</p>
-        <p class="mt-2 md:mt-0">Hier zien jullie een tante en een nichtje van Selvan in actie.</p>
-        <p class="mt-2 md:mt-0">En jij/jullie? Ook al een poging gedaan?</p>
-        <p class="mt-2 md:mt-0">Je laat het je toch niet gebeuren dat jij straks uit de toon valt, omdat je de pasjes niet kent? 😉</p>
-        `,
-      videos: ["/videos/roelie.mp4"],
-    },
-    "website-live": {
-      title: "Website gaat de lucht in!!!",
-      date: "2025-08-09",
-      image: "/images/mockup.png",
-      carouselImage: "/images/mockup.png",
-      content: `
-        <p>Het is gelukt! Vóórdat de avondgasten hun kaart in de bus hebben liggen. De websitebouwer (neef van Bertine) heeft heel erg z'n best gedaan om de deadline te halen. We zijn enorm blij met het resultaat.</p>
-        <p class="mt-2">3 hoeraatjes voor Wisse!!</p>
-      `,
-    },
-    "uitnodigingen-verstuurd": {
-      title: "Geen bruiloftsfeest zonder gasten!",
-      date: "2025-08-13",
-      image: "/images/Cards_Sending.jpeg",
-      content: `
-        <p>Selvan & Bertine hebben op verschillende momenten zoveel mogelijk zelf de uitnodigingen rondgebracht, zodat ze zeker weten dat jullie de kaart ontvangen! Dat je dit nu leest, betekent dat dat inderdaad gelukt is! 😉 </p>
-        <p class="mt-2"> Op de foto is het bruidspaar druk bezig met het vouwen en schrijven van de kaarten. Met de hulp van maar liefst 2 schoonzussen is deze flinke klus geklaard! 😊 </p>
-      `,
-      videos: [],
-    },
-    "wist-je-datje": {
-      title: "We zijn op zoek naar leuke wist-je-datjes!",
-      date: "2025-08-10",
-      image: "/images/diduknow.jpg",
-      content: `
-        <p>Heb je leuke verhalen of feitjes over Selvan en/of Bertine, die geschikt zijn om in de feestgids te zetten? Laat het ous weten, wij horen het graag!</p>
-        <br/>
-        <a href="mailto:eeltje.heida@chello.nl,elyseschonewille@hotmail.com" class="underline w-fit hover:decoration-primary-500">
-          <p>Mail ous hier!</p> 
-        </a>
-      `,
-      videos: [],
-    },
-  };
+// Load update data from JSON or fallback to hardcoded
+const { data: updateData, error } = await useAsyncData(
+  `news-${slug}`,
+  async () => {
+    const content = await loadNewsContent(slug);
 
-  return (
-    updates[slug] || {
-      title: "Update niet gevonden",
-      date: "2025-01-01",
-      image: "/images/mainimage.jpeg",
-      content: "<p>Deze update bestaat niet of is niet meer beschikbaar.</p>",
-      videos: [],
+    if (!content) {
+      return {
+        title: "Update niet gevonden",
+        date: "2025-01-01",
+        image: "/images/mainimage.jpeg",
+        content: "<p>Deze update bestaat niet of is niet meer beschikbaar.</p>",
+        videos: [],
+      };
     }
-  );
-});
+
+    return content;
+  }
+);
 
 // Format date for display
 const formatDate = (dateString: string) => {
@@ -255,11 +284,11 @@ const formatDate = (dateString: string) => {
 
 // SEO
 useHead({
-  title: `${updateData.value.title} - Bruiloft Selvan & Bertine`,
+  title: `${updateData?.value?.title || "Nieuws"} - Bruiloft Selvan & Bertine`,
   meta: [
     {
       name: "description",
-      content: `Lees meer over: ${updateData.value.title}`,
+      content: `Lees meer over: ${updateData?.value?.title || "Nieuws"}`,
     },
   ],
 });
