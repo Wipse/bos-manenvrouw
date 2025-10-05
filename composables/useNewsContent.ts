@@ -38,10 +38,16 @@ export const useNewsContent = () => {
           maar wist de achternaam van Bertine niet. Dat staat inderdaad ook nergens op deze site, dus voor 
           iedereen die dat ook niet weet en de kaart ook graag op die manier wil adresseren: 
         </p>
-        <br/>
-        <p>
-          Bertine haar achternaam is Kruize! 😊
+        <p class="mt-2">
+          Bertine haar achternaam is <strong> Kruize </strong>! 😊
         </p>
+          <br />
+        <p> Dit is ook gelijk het laatste nieuwsbericht vóór de huwelijksdag. <p/>
+        <p> Voor ons is het ook best een beetje spannend of de site goed gelezen is, want dat weten wij niet natuurlijk. We gaan het zien op het feest!<p/>
+        <p class="mt-2">En als je dit nu leest: bedankt voor het bezoeken en lezen van de site!</p>
+          <br />
+        <p>Tot vrijdag!</p>
+
       `,
     },
     wegafsluiting: {
