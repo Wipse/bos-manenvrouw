@@ -30,7 +30,7 @@
     </div>
 
     <!-- Bottom Section -->
-    <div class="bg-white w-screen h-fit">
+    <div class="bg-white w-screen h-fit scroll-mt-32" id="flashmob">
       <div class="container px-4 py-8">
         <!-- First Article -->
         <div class="max-w-4xl mx-auto md:col-span-8 md:col-start-3">
@@ -75,7 +75,8 @@
 
         <!-- Second Article -->
         <div
-          class="max-w-4xl mx-auto md:col-span-8 md:col-start-3 mt-16 md:mt-24 mb-16 md:mb-32"
+          id="card"
+          class="max-w-4xl mx-auto md:col-span-8 md:col-start-3 mt-16 md:mt-24 mb-16 md:mb-32 scroll-mt-32"
         >
           <Heading title="Kaartje" size="h2" class="-mb-2" />
           <div

@@ -21,6 +21,29 @@ type NewsMetadata = {
 export const useNewsContent = () => {
   // Hardcoded news items voor backwards compatibility
   const hardcodedNews: Record<string, NewsContent> = {
+    "kaart-en-dansje-niet-vergeten": {
+      title: "Vergeet je geschreven kaart + enveloppe niet!",
+      date: "2025-10-05",
+      image: "/images/attention.jpeg",
+      content: `
+         <p>
+           Vrijdag a.s. is het zover! Wij hebben er enorm veel zin in, jij/jullie ook?
+           Vergeet niet om het <a href="/help#flashmob" class="text-primary-600 hover:text-primary-700 underline"> dansje voor de flashmob</a> in te studeren 
+           en de <a href="/help#card" class="text-primary-600 hover:text-primary-700 underline"> kaart voor het bruidspaar</a> mee te nemen.</p>
+         </p>
+        <br/>
+        <p>
+          We kregen vandaag de vraag van een lieve buurvrouw uit Dalen wat nu eigenlijk de achternaam 
+          van Bertine is, want ze wilde op de kaart schrijven 'Aan het bruidspaar Bosman- ………', 
+          maar wist de achternaam van Bertine niet. Dat staat inderdaad ook nergens op deze site, dus voor 
+          iedereen die dat ook niet weet en de kaart ook graag op die manier wil adresseren: 
+        </p>
+        <br/>
+        <p>
+          Bertine haar achternaam is Kruize! 😊
+        </p>
+      `,
+    },
     wegafsluiting: {
       title: "Meer reistijd door wegafsluiting!",
       date: "2025-09-08",
@@ -140,6 +163,12 @@ export const useNewsContent = () => {
     } catch (error) {
       // Fallback naar hardcoded metadata
       return [
+        {
+          title: "Denk je aan de kaart?",
+          date: "2025-10-05",
+          image: "daggasten.jpeg",
+          slug: "kaart-en-dansje-niet-vergeten",
+        },
         {
           title: "Meer reistijd door wegafsluiting",
           date: "2025-09-08",
