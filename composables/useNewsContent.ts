@@ -21,6 +21,32 @@ type NewsMetadata = {
 export const useNewsContent = () => {
   // Hardcoded news items voor backwards compatibility
   const hardcodedNews: Record<string, NewsContent> = {
+    "kerkdienst-volgen": {
+      title: "Online de kerkdienst volgen? Dat kan!",
+      date: "2025-10-08",
+      image: "/images/Sellinger_Church.jpg",
+      content: `
+        <p>
+          Het is mogelijk om vrijdagmiddag vanaf 13.30 uur via een live-verbinding de kerkdienst in de Ned. Herv. Kerk in Sellingen online bij te wonen. 
+          Via onderstaande livestream kun je meekijken hoe Selvan & Bertine ook in de kerk elkaar het jawoord geven.
+        </p>
+        <br />
+        <a 
+          target="_blank"
+          href="https://kerkdienstgemist.nl/stations/2500/events/event/16207959-202510101330" 
+          class="text-primary-600 hover:text-primary-700 underline"
+        >
+          Klik hier voor de live-verbinding
+        </a>
+          <br /><br />
+        <p> Dit is ook gelijk het laatste nieuwsbericht vóór de huwelijksdag. <p/>
+        <p> Voor ons is het ook best een beetje spannend of de site goed gelezen is, want dat weten wij niet natuurlijk. We gaan het zien op het feest!<p/>
+        <p class="mt-2">En als je dit nu leest: bedankt voor het bezoeken en lezen van de site!</p>
+          <br />
+        <p>Tot vrijdag!</p>
+        
+      `,
+    },
     "kaart-en-dansje-niet-vergeten": {
       title: "Vergeet je geschreven kaart + enveloppe niet!",
       date: "2025-10-05",
@@ -41,13 +67,6 @@ export const useNewsContent = () => {
         <p class="mt-2">
           Bertine haar achternaam is <strong> Kruize </strong>! 😊
         </p>
-          <br />
-        <p> Dit is ook gelijk het laatste nieuwsbericht vóór de huwelijksdag. <p/>
-        <p> Voor ons is het ook best een beetje spannend of de site goed gelezen is, want dat weten wij niet natuurlijk. We gaan het zien op het feest!<p/>
-        <p class="mt-2">En als je dit nu leest: bedankt voor het bezoeken en lezen van de site!</p>
-          <br />
-        <p>Tot vrijdag!</p>
-
       `,
     },
     wegafsluiting: {
